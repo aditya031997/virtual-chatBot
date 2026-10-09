@@ -1,0 +1,15 @@
+---
+description: Keep pages and components under 150 lines
+globs: "**/*.{js,jsx,ts,tsx}"
+alwaysApply: true
+---
+
+# Max 150 Lines Per File
+
+No page or component file should exceed **150 lines**.
+
+- **If a file grows past 150 lines**: split it into smaller components, hooks, or utils and import them.
+- **Preferred**: extract reusable UI into `@/components`, shared logic into `@/utils` or `@/hooks`, and keep each file focused on one concern.
+- **Example**: A long chat panel was split into `ChatPanelHeader`, `ChatWelcomeMessage`, `ChatInfoForm`, `ChatMessageInput`, and a slim `ChatPanel` that composes them.
+
+This keeps the codebase readable and maintainable.
